@@ -2,7 +2,6 @@
 //  Document.swift
 //  SimpleApp
 //
-//  Created by Andre Masse on 29/10/2015.
 //
 //
 
@@ -10,8 +9,11 @@ import Cocoa
 
 class Document: NSPersistentDocument {
 
+    weak var viewController: ViewController?
+    
     override init() {
         super.init()
+        print("Document init called")
         // Add your subclass-specific initialization here.
     }
 
@@ -26,9 +28,25 @@ class Document: NSPersistentDocument {
 
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
+        print("Document makeWindowControllers called")
         let storyboard = NSStoryboard(name: "Main", bundle: nil)
         let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
+        
+        if let viewController = windowController.contentViewController {
+            viewController.setValue(self, forKey: "document")
+            self.viewController = viewController as? ViewController
+        }
+    }
+    
+    deinit {
+        print("Document deinit")
+        if let viewController = viewController {
+            viewController.stopObservingManagedContext()
+        }
+        else {
+            print("Document deinit, viewController is nil")
+        }
     }
 
 }

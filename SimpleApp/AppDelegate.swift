@@ -2,7 +2,6 @@
 //  AppDelegate.swift
 //  SimpleApp
 //
-//  Created by Andre Masse on 29/10/2015.
 //
 //
 
