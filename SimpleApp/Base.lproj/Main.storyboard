@@ -676,7 +676,7 @@
                             <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5z-Sr-6Qs">
                                 <rect key="frame" x="20" y="12" width="440" height="214"/>
                                 <clipView key="contentView" ambiguous="YES" id="cnT-I9-d3K">
-                                    <rect key="frame" x="1" y="23" width="438" height="190"/>
+                                    <rect key="frame" x="1" y="0.0" width="438" height="213"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="k64-9P-DdC" viewBased="YES" id="62O-wd-0aW">
@@ -773,11 +773,11 @@
                                 </clipView>
                                 <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="QZI-OK-oUb">
-                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <rect key="frame" x="1" y="7" width="0.0" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="1LB-bG-Gbf">
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="1LB-bG-Gbf">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
@@ -822,7 +822,7 @@
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController mode="entity" entityName="Part" automaticallyPreparesContent="YES" id="Nhf-9l-8lH">
                     <connections>
-                        <binding destination="5gI-5U-AMq" name="managedObjectContext" keyPath="document.managedObjectContext" id="rNv-Ny-o35"/>
+                        <binding destination="5gI-5U-AMq" name="managedObjectContext" keyPath="document.managedObjectContext" id="4nf-Tj-9ao"/>
                     </connections>
                 </arrayController>
             </objects>

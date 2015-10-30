@@ -13,48 +13,34 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var arrayController: NSArrayController!
     
-    weak var document: Document? {
+    // not sure if we can cause a retain cycle by using a strong reference
+    dynamic var document: Document? {
         didSet {
             print("ViewController, document didSet")
         }
     }
     
-    func stopObservingManagedContext() {
-        print("ViewController stopObservingManagedContext")
-        arrayController.setValue(nil, forKey: "content")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ViewController viewDidLoad")
-        
-        //        if let document = NSDocumentController.sharedDocumentController().documentForWindow(self.view.window!) {
-        //            print("Document = \(document)")
-        //        }
-        //        print("Document is nil")
-        // Do any additional setup after loading the view.
+
     }
     
     override func viewWillAppear() {
+        super.viewWillAppear()
         print("ViewController viewWillAppear")
-        //        if let document = NSDocumentController.sharedDocumentController().documentForWindow(self.view.window!) {
-        //            print("Document = \(document)")
-        //            self.document = document as? Document
-        //            let dummy : String = self.document!.dummyText
-        //            print("Value of document.dummyText = \(dummy)")
-        //
-        //        }
-        //        else {
-        //            fatalError("Document is nil")
-        //        }
+
     }
     
     override func viewDidAppear() {
+        super.viewDidAppear()
         print("ViewController viewDidAppear")
         
     }
     
     override func viewWillDisappear() {
+        super.viewWillDisappear()
         print("ViewController viewWillDisappear")
         
     }
@@ -67,7 +53,5 @@ class ViewController: NSViewController {
     
     deinit {
         print("ViewController deinit")
-        //        arrayController.
-        stopObservingManagedContext()
     }
 }

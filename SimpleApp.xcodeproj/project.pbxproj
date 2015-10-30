@@ -59,9 +59,9 @@
 				A1B7A4391BE2430300DE6976 /* AppDelegate.swift */,
 				A1B7A43B1BE2430300DE6976 /* ViewController.swift */,
 				A1B7A43D1BE2430300DE6976 /* Document.swift */,
-				A1B7A4421BE2430300DE6976 /* Assets.xcassets */,
 				A1B7A4441BE2430300DE6976 /* Main.storyboard */,
 				A1B7A4471BE2430300DE6976 /* Info.plist */,
+				A1B7A4421BE2430300DE6976 /* Assets.xcassets */,
 				A1B7A43F1BE2430300DE6976 /* Document.xcdatamodeld */,
 			);
 			path = SimpleApp;
@@ -280,6 +280,7 @@
 				A1B7A44C1BE2430300DE6976 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

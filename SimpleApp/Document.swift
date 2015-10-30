@@ -9,7 +9,6 @@ import Cocoa
 
 class Document: NSPersistentDocument {
 
-    weak var viewController: ViewController?
     
     override init() {
         super.init()
@@ -35,18 +34,13 @@ class Document: NSPersistentDocument {
         
         if let viewController = windowController.contentViewController {
             viewController.setValue(self, forKey: "document")
-            self.viewController = viewController as? ViewController
         }
     }
     
     deinit {
         print("Document deinit")
-        if let viewController = viewController {
-            viewController.stopObservingManagedContext()
-        }
-        else {
-            print("Document deinit, viewController is nil")
-        }
+        print("---------\n")
+        
     }
 
 }
